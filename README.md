@@ -1,3 +1,3 @@
 # macOsTools
-Tools for macOS
+Tools for macOS<br>
 CPU temperature
