@@ -1,12 +1,12 @@
-// 
-// FAN speed MacOS
-// Hudson Schumaker
-//
+all:
+	gcc -o fanspeed main.c
 
-#include <stdio.h>
-#include <stdlib.h>
+crun:
+	gcc -o fanspeed main.c
+	./fanspeed
 
-int main(void) {
-	system("sudo powermetrics --samplers smc |grep -i \"FAN\"");
-	return 0; 
-}
+run:
+	./fanspeed
+
+clear:
+	rm fanspeed
