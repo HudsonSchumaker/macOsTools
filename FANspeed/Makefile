@@ -1,5 +1,5 @@
 all:
-	gcc -o fanspeed main.c
+	gcc -o fanspeed fan.c
 
 crun:
 	gcc -o fanspeed main.c
