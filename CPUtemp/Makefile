@@ -1,5 +1,5 @@
 all:
-	gcc -o cputemp cpu.c
+	gcc -o cputemp cpu.c 
 	./cputemp
 
 comp:
