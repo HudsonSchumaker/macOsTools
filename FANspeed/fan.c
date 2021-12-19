@@ -1,6 +1,6 @@
 // 
 // FAN speed MacOS
-// Hudson Schumaker
+// Hudson Schumaker 
 //
 
 #include <stdio.h>
