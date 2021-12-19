@@ -1,6 +1,6 @@
 // 
 // GPU temperature MacOS
-// Hudson Schumaker 
+// Hudson Schumaker
 //
 
 #include <stdio.h>
