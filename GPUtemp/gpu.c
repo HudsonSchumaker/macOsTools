@@ -1,5 +1,5 @@
 // 
-// GPU temperature MacOS
+// GPU temperature MacOS 
 // Hudson Schumaker
 //
 
