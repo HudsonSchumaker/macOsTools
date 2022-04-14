@@ -1,0 +1,34 @@
+name: build TCP
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: compile
+      run: |
+        cd TCP
+        mkdir build
+        gcc -o build/tcp main.c
+        cd ..
+    
+    - name: compress
+      run: tar -cvf ./TCP/artifacts.tar ./TCP/build
+      
+    - name: see files
+      run: ls -al
+    
+    - name: upload macOS binary
+      uses: actions/upload-artifact@v2
+      with:
+        name: assets
+        path: TCP/build
