@@ -32,7 +32,3 @@ jobs:
       with:
         name: assets
         path: GPUtemp/build
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
