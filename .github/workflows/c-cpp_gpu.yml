@@ -1,0 +1,38 @@
+name: build GPU
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: compile
+      run: |
+        cd GPUtemp
+        mkdir build
+        gcc -o build/gpu gpu.c
+        cd ..
+    
+    - name: compress
+      run: tar -cvf ./GPUtemp/artifacts.tar ./GPUtemp/build
+      
+    - name: see files
+      run: ls -al
+    
+    - name: upload macOS binary
+      uses: actions/upload-artifact@v2
+      with:
+        name: assets
+        path: GPUtemp/build
+    - name: make check
+      run: make check
+    - name: make distcheck
+      run: make distcheck
