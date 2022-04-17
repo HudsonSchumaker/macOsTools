@@ -23,9 +23,6 @@ jobs:
     
     - name: compress
       run: tar -cvf ./CPUtemp/artifacts.tar ./CPUtemp/build
-      
-    - name: see files
-      run: ls -al
     
     - name: upload macOS binary
       uses: actions/upload-artifact@v2
