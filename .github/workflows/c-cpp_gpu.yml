@@ -24,9 +24,6 @@ jobs:
     - name: compress
       run: tar -cvf ./GPUtemp/artifacts.tar ./GPUtemp/build
       
-    - name: see files
-      run: ls -al
-    
     - name: upload macOS binary
       uses: actions/upload-artifact@v2
       with:
