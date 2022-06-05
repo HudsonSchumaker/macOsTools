@@ -1,3 +1,6 @@
+# 
+# compilation 
+#
 all:
 	gcc -o gputemp cpu.c
 	./gputemp
