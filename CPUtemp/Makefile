@@ -1,4 +1,7 @@
-#compilation
+# 
+# compilation 
+#
+
 all:
 	gcc -o cputemp cpu.c
 	./cputemp
