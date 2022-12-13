@@ -7,6 +7,7 @@
 #include <stdlib.h>
 
 int main(void) {
+	// sudo powermetrics -s thermal | grep -A2 -i thermal	
 	system("sudo powermetrics --samplers smc |grep -i \"CPU die temperature\"");
 	return 0; 
 }
